@@ -1393,27 +1393,25 @@
     .trust-strip {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
-      overflow-x: auto;
     }
 
     .trust-strip-inner {
       max-width: 1440px;
       margin: 0 auto;
       padding: 0 48px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
       align-items: stretch;
     }
 
     .trust-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
-      padding: 20px 32px;
+      padding: 20px 22px;
       border-right: 1px solid var(--border);
-      white-space: nowrap;
-      flex-shrink: 0;
+      min-width: 0;
     }
-    .trust-item:first-child { padding-left: 0; }
     .trust-item:last-child { border-right: none; }
 
     .trust-item-star {
@@ -1421,6 +1419,7 @@
       color: var(--gold);
       letter-spacing: 1px;
       flex-shrink: 0;
+      line-height: 1.1;
     }
 
     .trust-item-icon {
@@ -1428,6 +1427,7 @@
       height: 4px;
       background: var(--gold);
       flex-shrink: 0;
+      margin-top: 6px;
     }
 
     .trust-item-text {
@@ -1501,6 +1501,122 @@
 
 
     /* ════════════════════════════════════════
+       TEAM, the people who do the work
+    ════════════════════════════════════════ */
+    .team {
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 47fr 53fr;
+      min-height: clamp(460px, 52vw, 720px);
+    }
+
+    .team-photo-zone {
+      position: relative;
+      overflow: hidden;
+      background: var(--dark);
+      border-right: 5px solid var(--gold);
+      min-height: clamp(320px, 38vw, 560px);
+    }
+
+    .team-photo-zone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .team-content {
+      padding: 80px 48px 80px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .team-super {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .team-super::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .team-headline {
+      font-size: clamp(30px, 3.6vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+
+    .team-headline em {
+      font-style: italic;
+      color: var(--red);
+    }
+
+    .team-body {
+      font-size: 16px;
+      color: var(--body);
+      line-height: 1.85;
+      margin-bottom: 32px;
+      max-width: 52ch;
+    }
+
+    .team-points {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 36px;
+      max-width: 52ch;
+    }
+
+    .team-point {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--body);
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+    .team-point::before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      flex-shrink: 0;
+      transform: translateY(-1px);
+    }
+
+    .team-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+
+    /* ════════════════════════════════════════
        RESPONSIVE
     ════════════════════════════════════════ */
     @media (max-width: 1100px) {
@@ -1521,6 +1637,8 @@
       .svc-desc-col { padding-top: 0; }
       .about-grid { grid-template-columns: 1fr 1fr; }
       .about-content { padding: 64px 40px 64px 40px; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .team-content { padding: 64px 40px; }
       .ev-columns { grid-template-columns: 1fr; gap: 40px; }
       .contact-inner { grid-template-columns: 1fr; }
       .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 56px; }
@@ -1548,6 +1666,9 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-content { padding: 56px 24px 48px; }
       .about-photo-zone { min-height: clamp(260px, 60vw, 420px); height: auto; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-photo-zone { min-height: clamp(260px, 62vw, 420px); border-right: none; border-bottom: 5px solid var(--gold); order: -1; }
+      .team-content { padding: 48px 24px; }
       .contact-inner, .services-header-row, .services-foot { padding-left: 24px; padding-right: 24px; }
       .svc-name-col { padding: 24px 24px 12px; }
       .svc-desc-col { padding: 0 24px 24px; border-right: none; }
@@ -1816,7 +1937,7 @@
   <div class="hero-content">
     <div>
       <p class="hero-location">Shenton Park, Perth</p>
-      <p class="hero-kicker">30+ years in the same spot · European, hybrid &amp; EV specialists</p>
+      <p class="hero-kicker">European, hybrid &amp; EV specialists · 30+ years in the same spot</p>
       <h1 class="hero-headline">
   <span class="line">We'll tell</span>
   <span class="line">you what's</span>
@@ -1843,8 +1964,8 @@
   <!-- Photo, absolutely placed, NOT a column, diagonal left edge -->
   <div class="hero-photo" aria-hidden="true">
     <picture>
-      <source srcset="/img/01-workshop-hero-suv-on-hoist.webp" type="image/webp">
-      <img src="/img/01-workshop-hero-suv-on-hoist.jpg" alt="Vehicle on hoist inside Automotive Insight workshop, Shenton Park" width="1920" height="1280" loading="lazy" decoding="async">
+      <source srcset="/img/01-hero-service-in-progress.webp" type="image/webp">
+      <img src="/img/01-hero-service-in-progress.jpg" alt="Technician servicing a Volkswagen Tiguan on the hoist at Automotive Insight, Shenton Park" width="1600" height="1500" fetchpriority="high" decoding="async">
     </picture>
   </div>
 
@@ -1864,6 +1985,13 @@
     <div class="trust-item">
       <span class="trust-item-icon"></span>
       <div>
+        <div class="trust-item-text">EV &amp; hybrid specialist</div>
+        <div class="trust-item-sub">Factory-level OEM diagnostics</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-item-icon"></span>
+      <div>
         <div class="trust-item-text">30+ years</div>
         <div class="trust-item-sub">Same location, same principles</div>
       </div>
@@ -1873,13 +2001,6 @@
       <div>
         <div class="trust-item-text">DOT inspection licence</div>
         <div class="trust-item-sub">Roadworthy certificates on-site</div>
-      </div>
-    </div>
-    <div class="trust-item">
-      <span class="trust-item-icon"></span>
-      <div>
-        <div class="trust-item-text">EV &amp; hybrid specialist</div>
-        <div class="trust-item-sub">Factory-level OEM diagnostics</div>
       </div>
     </div>
     <div class="trust-item">
@@ -1896,7 +2017,7 @@
 <!-- ════════ MAKES ════════ -->
 <div class="makes" aria-label="Brands we service">
   <div class="makes-inner">
-    <span class="makes-label">We service</span>
+    <span class="makes-label">Specialists in</span>
     <div class="makes-list">
       <span class="make">Audi</span>
       <span class="make">BMW</span>
@@ -2059,8 +2180,8 @@
   <!-- Sticky image column -->
   <div class="services-img-col" aria-hidden="true">
     <picture>
-      <source srcset="/img/02-team-mechanic-at-work.webp" type="image/webp">
-      <img src="/img/02-team-mechanic-at-work.jpg" alt="Automotive Insight mechanic working underneath a vehicle on the hoist" width="1920" height="1280" fetchpriority="high" decoding="async">
+      <source srcset="/img/02-technician-engine-bay.webp" type="image/webp">
+      <img src="/img/02-technician-engine-bay.jpg" alt="Automotive Insight technician inspecting the engine bay of a Volkswagen Golf GTI" width="900" height="1600" loading="lazy" decoding="async">
     </picture>
   </div>
 
@@ -2101,8 +2222,8 @@
   <!-- Full-width photo strip at the bottom -->
   <div class="ev-photo-strip" aria-hidden="true">
     <picture>
-      <source srcset="/img/14-workshop-latest.webp" type="image/webp">
-      <img src="/img/14-workshop-latest.jpg" alt="Mechanic servicing a vehicle inside the Automotive Insight workshop" width="1200" height="900" loading="lazy" decoding="async">
+      <source srcset="/img/04-workshop-wide.webp" type="image/webp">
+      <img src="/img/04-workshop-wide.jpg" alt="Service bays at Automotive Insight with vehicles on the hoists" width="2400" height="700" loading="lazy" decoding="async">
     </picture>
   </div>
 
@@ -2144,8 +2265,8 @@
     <!-- Workshop photo, right column -->
     <div class="about-photo-zone" aria-label="Workshop photo">
       <picture>
-        <source srcset="/img/10-workshop-detail-c.webp" type="image/webp">
-        <img src="/img/10-workshop-detail-c.jpg" alt="Automotive Insight shopfront, 206A Stubbs Terrace, Shenton Park" width="1200" height="900" loading="lazy" decoding="async">
+        <source srcset="/img/03-shopfront-exterior.webp" type="image/webp">
+        <img src="/img/03-shopfront-exterior.jpg" alt="Automotive Insight shopfront at 206A Stubbs Terrace, Shenton Park" width="1400" height="950" loading="lazy" decoding="async">
       </picture>
       <div class="about-address-bar">
         <div class="al">Our location</div>
@@ -2158,32 +2279,72 @@
 </section>
 
 
+<!-- ════════ TEAM, the people who do the work ════════ -->
+<section class="team" aria-labelledby="team-h">
+  <div class="team-grid">
+
+    <div class="team-photo-zone">
+      <picture>
+        <source srcset="/img/08-the-team.webp" type="image/webp">
+        <img src="/img/08-the-team.jpg" alt="The Automotive Insight team at the Shenton Park workshop" width="1400" height="1150" loading="lazy" decoding="async">
+      </picture>
+    </div>
+
+    <div class="team-content">
+      <p class="team-super">The team</p>
+
+      <h2 class="team-headline" id="team-h">
+        The person handing<br>your keys back is the<br>one who <em>did the work.</em>
+      </h2>
+
+      <p class="team-body">
+        One workshop, one team, no call centre in the middle. The technician who diagnosed your car
+        is the one who talks you through it, in plain English. If it helps to see the part that failed,
+        we'll show you the part that failed.
+      </p>
+
+      <ul class="team-points">
+        <li class="team-point">You speak to the technician, not a service advisor</li>
+        <li class="team-point">Factory-level OEM diagnostics across all major brands</li>
+        <li class="team-point">DOT inspection licence, roadworthy certificates issued on-site</li>
+      </ul>
+
+      <div class="team-actions">
+        <button class="btn btn-red" onclick="openModal()">Book a service</button>
+        <a href="/about/" class="btn btn-ghost">About the workshop</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- ════════ GALLERY STRIP, 3 workshop photos ════════ -->
 <section class="gallery" aria-label="Workshop gallery">
   <div class="gallery-inner">
 
     <div class="gallery-photo">
       <picture>
-        <source srcset="/img/09-workshop-detail-b.webp" type="image/webp">
-        <img src="/img/09-workshop-detail-b.jpg" alt="Toyota Land Cruisers inside the Automotive Insight workshop" width="1200" height="900" loading="lazy" decoding="async">
+        <source srcset="/img/05-workshop-bays.webp" type="image/webp">
+        <img src="/img/05-workshop-bays.jpg" alt="Toyota Prado and Volkswagen Golf GTI on the two-post hoists at Automotive Insight" width="1200" height="900" loading="lazy" decoding="async">
       </picture>
       <div class="gallery-caption"><span>Inside the workshop</span></div>
     </div>
 
     <div class="gallery-photo">
       <picture>
-        <source srcset="/img/13-workshop-recent-c.webp" type="image/webp">
-        <img src="/img/13-workshop-recent-c.jpg" alt="BMW M4 outside Automotive Insight, Shenton Park" width="1200" height="900" loading="lazy" decoding="async">
+        <source srcset="/img/06-technicians-under-vehicle.webp" type="image/webp">
+        <img src="/img/06-technicians-under-vehicle.jpg" alt="Two Automotive Insight technicians inspecting a Subaru Forester on the hoist" width="1200" height="900" loading="lazy" decoding="async">
       </picture>
-      <div class="gallery-caption"><span>European car specialist</span></div>
+      <div class="gallery-caption"><span>Diagnosis before repair</span></div>
     </div>
 
     <div class="gallery-photo">
       <picture>
-        <source srcset="/img/15-workshop-latest-b.webp" type="image/webp">
-        <img src="/img/15-workshop-latest-b.jpg" alt="Vehicle on hoist inside the Automotive Insight workshop" width="900" height="1200" loading="lazy" decoding="async">
+        <source srcset="/img/07-team-at-work.webp" type="image/webp">
+        <img src="/img/07-team-at-work.jpg" alt="The Automotive Insight team in the Shenton Park workshop" width="1200" height="900" loading="lazy" decoding="async">
       </picture>
-      <div class="gallery-caption"><span>The workshop</span></div>
+      <div class="gallery-caption"><span>The team on the tools</span></div>
     </div>
 
   </div>
