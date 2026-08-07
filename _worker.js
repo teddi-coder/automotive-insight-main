@@ -13,14 +13,14 @@ function addSecurityHeaders(response) {
   newHeaders.set('Permissions-Policy',          'camera=(), microphone=(), geolocation=(), payment=()');
   newHeaders.set('Content-Security-Policy',
     "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.googleapis.com; " +
+    "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.googleapis.com https://connect.podium.com https://cdn.podiumassets.com; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
     "font-src 'self' https://fonts.gstatic.com; " +
     // NOTE: automotiveinsight.com.au is in img-src because images are currently
     // hotlinked from there. Remove once images are migrated to the new CDN.
     "img-src 'self' data: https://automotiveinsight.com.au https://services.automotiveinsight.com.au https://maps.gstatic.com; " +
     "frame-src https://www.google.com; " +
-    "connect-src 'self' https://*.supabase.co");
+    "connect-src 'self' https://*.supabase.co https://connect.podium.com");
 
   return new Response(response.body, {
     status:  response.status,
@@ -72,27 +72,38 @@ function buildSitemap() {
 const ROBOTS_TXT = `User-agent: *
 Allow: /
 
-# AI crawlers — disallowed from training data use
+# AI crawlers — all permitted (deliberate policy; review if training-data opt-out desired)
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-# AI crawlers permitted (search feature use only)
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://automotiveinsight.com.au/sitemap.xml
