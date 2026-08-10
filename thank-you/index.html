@@ -152,12 +152,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- NAV -->
+<!-- ════════ NAV ════════ -->
 <header>
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Automotive Insight — home">
-      <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/10/cropped-AI-Logo-221x74.jpg" alt="Automotive Insight" width="221" height="74" loading="eager">
+    <a href="/" class="nav-logo" aria-label="Automotive Insight">
+      <img src="/img/logo.png" alt="Automotive Insight" width="286" height="135">
     </a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
@@ -167,7 +167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="mega-menu">
           <div class="mega-links">
             <a href="/european-cars/">European Cars</a>
-            <a href="/asian-cars/">Asian Cars</a>
+            <a href="/asian-cars/">General Servicing</a>
             <a href="/logbook-service/">Logbook Servicing</a>
             <a href="/fleet-maintenance/">Fleet Maintenance</a>
             <a href="/brakes-suspension/">Brakes &amp; Suspension</a>
@@ -175,29 +175,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/auto-electrical/">Auto Electrical</a>
           </div>
           <div class="mega-img">
-            <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/10/Mechanic-with-Clip-Board.jpg" alt="" width="160" height="200" loading="lazy">
+            <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/12/Audi-Q7-FrontB.jpg" alt="European car" width="1200" height="800" fetchpriority="high" decoding="async">
           </div>
         </div>
       </li>
       <li class="dd">
         <a href="/ev-hybrid/">EV &amp; Hybrid</a>
-        <div class="mega-menu">
-          <div class="mega-links">
-            <a href="/ev-hybrid/">Overview</a>
-            <a href="/ev-hybrid/hybrid-servicing/">Hybrid Servicing</a>
-            <a href="/ev-hybrid/ev-charging/">EV Charging</a>
-            <a href="/ev-hybrid/ev-diagnostics/">EV Diagnostics</a>
-          </div>
-          <div class="mega-img">
-            <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/10/hybrid-rav-4-3-1.jpg" alt="" width="160" height="200" loading="lazy">
-          </div>
+        <div class="dd-menu">
+          <a href="/ev-hybrid/hybrid-servicing/">Hybrid Servicing</a>
+          <a href="/ev-hybrid/ev-charging/">EV Charging</a>
+          <a href="/ev-hybrid/ev-diagnostics/">EV Diagnostics</a>
         </div>
       </li>
       <li><a href="/faqs/">FAQs</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
     <a href="tel:0482097182" class="nav-phone">0482 097 182</a>
-    <button class="btn btn-red nav-cta" onclick="window.location.href='/'">Back to home</button>
+    <button class="btn btn-red nav-cta" onclick="openModal()">Book a service</button>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -207,16 +201,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/about/">About</a>
     <a href="/services/">Services</a>
     <a href="/european-cars/" style="padding-left:44px;font-size:11px">European Cars</a>
-    <a href="/asian-cars/" style="padding-left:44px;font-size:11px">Asian Cars</a>
+    <a href="/asian-cars/" style="padding-left:44px;font-size:11px">General Servicing</a>
     <a href="/logbook-service/" style="padding-left:44px;font-size:11px">Logbook Servicing</a>
     <a href="/fleet-maintenance/" style="padding-left:44px;font-size:11px">Fleet Maintenance</a>
     <a href="/brakes-suspension/" style="padding-left:44px;font-size:11px">Brakes &amp; Suspension</a>
     <a href="/diagnostics/" style="padding-left:44px;font-size:11px">Diagnostics</a>
     <a href="/auto-electrical/" style="padding-left:44px;font-size:11px">Auto Electrical</a>
     <a href="/ev-hybrid/">EV &amp; Hybrid</a>
+    <a href="/ev-hybrid/hybrid-servicing/" style="padding-left:44px;font-size:11px">Hybrid Servicing</a>
+    <a href="/ev-hybrid/ev-charging/" style="padding-left:44px;font-size:11px">EV Charging</a>
+    <a href="/ev-hybrid/ev-diagnostics/" style="padding-left:44px;font-size:11px">EV Diagnostics</a>
     <a href="/faqs/">FAQs</a>
+    <a href="/reviews/">Reviews</a>
     <a href="/contact/">Contact</a>
-    <a href="tel:0482097182" class="btn btn-red">0482 097 182</a>
+    <button class="btn btn-red" onclick="openModal();closeMobileNav()">Book a service</button>
   </div>
 </nav>
 </header>
@@ -224,7 +222,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main-content">
 
 <!-- THANK YOU CONTENT -->
-<main>
   <div class="ty-wrap">
     <div class="ty-inner">
       <div class="ty-check">
@@ -232,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <p class="ty-kicker">Booking request received</p>
       <h1>We'll be in touch shortly.</h1>
-      <p>Your booking request has been sent to our team. We confirm all bookings within one business day — usually much faster.</p>
+      <p>Your booking request has been sent to our team. We confirm all bookings within one business day  -  usually much faster.</p>
 
       <div class="ty-steps">
         <h2>What happens next</h2>
@@ -246,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="ty-step">
           <div class="ty-step-num">3</div>
-          <div class="ty-step-text"><strong>We call before we touch anything</strong> outside the agreed scope — no surprises at collection.</div>
+          <div class="ty-step-text"><strong>We call before we touch anything</strong> outside the agreed scope  -  no surprises at collection.</div>
         </div>
       </div>
 
@@ -258,18 +255,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </main>
 
-<!-- FOOTER -->
+<!-- ════════ FOOTER ════════ -->
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/10/cropped-AI-Logo-221x74.jpg" alt="Automotive Insight" width="221" height="74" loading="lazy">
+      <img src="/img/logo.png" alt="Automotive Insight" width="286" height="135">
       <p>European, hybrid, and EV specialists in Shenton Park. We've been here since 1993. Your Service Advisor is your dedicated point of contact.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
         <li><a href="/european-cars/">European Cars</a></li>
-        <li><a href="/asian-cars/">Asian Cars</a></li>
+        <li><a href="/asian-cars/">General Servicing</a></li>
         <li><a href="/logbook-service/">Logbook Servicing</a></li>
         <li><a href="/fleet-maintenance/">Fleet Maintenance</a></li>
         <li><a href="/brakes-suspension/">Brakes &amp; Suspension</a></li>
@@ -296,6 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
   </div>
+
   <div class="footer-bottom">
     <span class="footer-legal">© 2026 Automotive Insight &nbsp;·&nbsp; 206A Stubbs Terrace, Shenton Park WA 6008</span>
     <div class="footer-links">
@@ -316,7 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => { nav.style.boxShadow = scrollY > 20 ? '0 4px 32px rgba(0,0,0,0.3)' : ''; }, { passive: true });
 
-  /* GA4 conversion event — fires once when /thank-you loads */
+  /* GA4 conversion event  -  fires once when /thank-you loads */
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'booking_request_submitted',

@@ -353,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="email" id="m-email" placeholder="you@email.com" required autocomplete="email">
           </div>
           <div class="form-submit">
-            <button type="button" id="m-next-step" class="btn btn-red">Next — vehicle details →</button>
+            <button type="button" id="m-next-step" class="btn btn-red">Next  -  vehicle details →</button>
           </div>
           <p class="modal-phone-fallback">Prefer to call or SMS? <a href="tel:+61482097182">0482 097 182</a> &nbsp;·&nbsp; Mon–Fri 7:30am–5pm</p>
         </div>
@@ -414,7 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- NAV -->
+<!-- ════════ NAV ════════ -->
 <header>
 <nav class="nav">
   <div class="nav-inner">
@@ -426,14 +426,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="/about/">About</a></li>
       <li class="dd">
         <a href="/services/">Services</a>
-        <div class="dd-menu">
-          <a href="/european-cars/">European Cars</a>
-          <a href="/asian-cars/">Asian Cars</a>
-          <a href="/logbook-service/">Logbook Servicing</a>
-          <a href="/fleet-maintenance/">Fleet Maintenance</a>
-          <a href="/brakes-suspension/">Brakes &amp; Suspension</a>
-          <a href="/diagnostics/">Diagnostics</a>
-          <a href="/auto-electrical/">Auto Electrical</a>
+        <div class="mega-menu">
+          <div class="mega-links">
+            <a href="/european-cars/">European Cars</a>
+            <a href="/asian-cars/">General Servicing</a>
+            <a href="/logbook-service/">Logbook Servicing</a>
+            <a href="/fleet-maintenance/">Fleet Maintenance</a>
+            <a href="/brakes-suspension/">Brakes &amp; Suspension</a>
+            <a href="/diagnostics/">Diagnostics</a>
+            <a href="/auto-electrical/">Auto Electrical</a>
+          </div>
+          <div class="mega-img">
+            <img src="https://automotiveinsight.com.au/wp-content/uploads/2025/12/Audi-Q7-FrontB.jpg" alt="European car" width="1200" height="800" fetchpriority="high" decoding="async">
+          </div>
         </div>
       </li>
       <li class="dd">
@@ -458,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/about/">About</a>
     <a href="/services/">Services</a>
     <a href="/european-cars/" style="padding-left:44px;font-size:11px">European Cars</a>
-    <a href="/asian-cars/" style="padding-left:44px;font-size:11px">Asian Cars</a>
+    <a href="/asian-cars/" style="padding-left:44px;font-size:11px">General Servicing</a>
     <a href="/logbook-service/" style="padding-left:44px;font-size:11px">Logbook Servicing</a>
     <a href="/fleet-maintenance/" style="padding-left:44px;font-size:11px">Fleet Maintenance</a>
     <a href="/brakes-suspension/" style="padding-left:44px;font-size:11px">Brakes &amp; Suspension</a>
@@ -524,7 +529,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="detail">
           <span class="dk">Hours</span>
-          <span class="dv">Mon–Fri 7:30am – 5:00pm<br><small style="font-size:0.85em;opacity:0.75;">Closed every second Monday — please call ahead.</small></span>
+          <span class="dv">Mon–Fri 7:30am – 5:00pm<br><small style="font-size:0.85em;opacity:0.75;">Closed every second Monday  -  please call ahead.</small></span>
         </div>
       </div>
     </div>
@@ -551,14 +556,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="field"><label for="c-date">Preferred date *</label><input type="date" id="c-date" required></div>
         </div>
         <div class="form-submit"><button type="submit" class="btn btn-red" id="c-submit">Request a booking</button></div>
-        <p class="modal-note" id="c-success" style="display:none;color:#2a7a2a;font-weight:700;margin-top:10px;">Booking request received — we'll confirm within one business day.</p>
+        <p class="modal-note" id="c-success" style="display:none;color:#2a7a2a;font-weight:700;margin-top:10px;">Booking request received  -  we'll confirm within one business day.</p>
         <p class="modal-note" id="c-error" style="display:none;color:var(--red);margin-top:10px;">Something went wrong. Please call us on <a href="tel:+61482097182" class="tel-link">0482 097 182</a>.</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+</main>
+
+<!-- ════════ FOOTER ════════ -->
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -569,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h5>Services</h5>
       <ul>
         <li><a href="/european-cars/">European Cars</a></li>
-        <li><a href="/asian-cars/">Asian Cars</a></li>
+        <li><a href="/asian-cars/">General Servicing</a></li>
         <li><a href="/logbook-service/">Logbook Servicing</a></li>
         <li><a href="/fleet-maintenance/">Fleet Maintenance</a></li>
         <li><a href="/brakes-suspension/">Brakes &amp; Suspension</a></li>
@@ -596,6 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
   </div>
+
   <div class="footer-bottom">
     <span class="footer-legal">© 2026 Automotive Insight &nbsp;·&nbsp; 206A Stubbs Terrace, Shenton Park WA 6008</span>
     <div class="footer-links">
@@ -633,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   }
 
-  /* Modal booking form — 2-step navigation */
+  /* Modal booking form  -  2-step navigation */
   const _mStep1   = document.getElementById('m-step-1');
   const _mStep2   = document.getElementById('m-step-2');
   const _mNextBtn = document.getElementById('m-next-step');
