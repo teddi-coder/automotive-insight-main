@@ -564,6 +564,11 @@
       padding: 32px 72px;
     }
 
+    .services-intro {
+      padding: 32px 72px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
     /* Sticky image column, right side of services */
     .services-img-col {
       width: 360px;
@@ -1631,7 +1636,7 @@
       /* Services */
       .services { flex-direction: column; }
       .services-img-col { display: none; }
-      .services-header-row { flex-direction: column; gap: 16px; }
+      .services-header-row { flex-direction: column; align-items: flex-start; gap: 16px; }
       .svc { grid-template-columns: 1fr; }
       .svc-desc-col { padding-top: 0; }
       .about-grid { grid-template-columns: 1fr 1fr; }
@@ -1658,7 +1663,7 @@
         clip-path: none;
         flex-shrink: 0;
       }
-      .hero-photo img { object-position: center center; }
+      .hero-photo img { object-position: center 30%; }
       .hero-ghost { display: none; }
       /* Other sections */
       .ev-text, .review, .book, .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
@@ -1668,7 +1673,7 @@
       .team-grid { grid-template-columns: 1fr; }
       .team-photo-zone { min-height: clamp(260px, 62vw, 420px); border-right: none; border-bottom: 5px solid var(--gold); order: -1; }
       .team-content { padding: 48px 24px; }
-      .contact-inner, .services-header-row, .services-foot { padding-left: 24px; padding-right: 24px; }
+      .contact-inner, .services-header-row, .services-foot, .services-intro { padding-left: 24px; padding-right: 24px; }
       .svc-name-col { padding: 24px 24px 12px; }
       .svc-desc-col { padding: 0 24px 24px; border-right: none; }
       .nav-links, .nav-cta { display: none; }
@@ -2079,7 +2084,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="services-header-row">
       <h2 id="services-h">What we do</h2>
     </div>
-    <div style="padding: 32px 72px 0; border-bottom: 1px solid var(--border);">
+    <div class="services-intro">
       <p style="font-size:15px;color:var(--ink-2);line-height:1.7;max-width:640px;padding-bottom:32px;">Premium servicing for European and Asian marques, hybrids, and EVs. One workshop, no second tier.</p>
     </div>
 
