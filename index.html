@@ -866,7 +866,7 @@
 
     .gallery-inner {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .gallery-photo {
@@ -1698,8 +1698,6 @@
       .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 56px; }
       .contact-right { padding: 56px 0; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-      .gallery-inner { grid-template-columns: 1fr 1fr; }
-      .gallery-photo:last-child { display: none; }
     }
 
     @media (max-width: 768px) {
@@ -1734,8 +1732,6 @@
       .footer-grid { grid-template-columns: 1fr; }
       .about-ghost { font-size: 180px; }
       .gallery-inner { grid-template-columns: 1fr; }
-      .gallery-photo:last-child { display: flex; }
-      .gallery-photo:nth-child(2) { display: none; }
       .offer-strip-inner { padding: 40px 24px; }
       .offer-grid { grid-template-columns: 1fr; gap: 28px; }
     }
@@ -2456,18 +2452,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="gallery-photo">
       <picture>
-        <source srcset="/img/06-technicians-under-vehicle.webp" type="image/webp">
-        <img src="/img/06-technicians-under-vehicle.jpg" alt="Two Automotive Insight technicians inspecting a Subaru Forester on the hoist" width="1200" height="900" loading="lazy" decoding="async">
-      </picture>
-      <div class="gallery-caption"><span>Diagnosis before repair</span></div>
-    </div>
-
-    <div class="gallery-photo">
-      <picture>
         <source srcset="/img/07-team-at-work.webp" type="image/webp">
         <img src="/img/07-team-at-work.jpg" alt="Two Automotive Insight technicians working under a Subaru Forester on the hoist, Shenton Park" width="1200" height="900" loading="lazy" decoding="async">
       </picture>
-      <div class="gallery-caption"><span>The team on the tools</span></div>
+      <div class="gallery-caption"><span>Diagnosis before repair</span></div>
     </div>
 
   </div>
