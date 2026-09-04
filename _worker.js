@@ -16,9 +16,7 @@ function addSecurityHeaders(response) {
     "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.googleapis.com https://connect.podium.com https://cdn.podiumassets.com https://www.googletagmanager.com https://www.google-analytics.com https://s.ksrndkehqnwntyxlhgto.com; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
     "font-src 'self' https://fonts.gstatic.com; " +
-    // NOTE: automotiveinsight.com.au is in img-src because images are currently
-    // hotlinked from there. Remove once images are migrated to the new CDN.
-    "img-src 'self' data: https://automotiveinsight.com.au https://services.automotiveinsight.com.au https://maps.gstatic.com; " +
+    "img-src 'self' data: https://maps.gstatic.com; " +
     "frame-src https://www.google.com; " +
     "connect-src 'self' https://*.supabase.co https://connect.podium.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://s.ksrndkehqnwntyxlhgto.com");
 
