@@ -268,25 +268,6 @@
       flex: 1;
     }
 
-    .hero-location {
-      font-size: clamp(28px, 4vw, 52px);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--dark);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .hero-location::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 3px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
     .hero-kicker {
       font-size: 13px;
       font-weight: 600;
@@ -312,12 +293,16 @@
     .hero-headline-sub {
       display: block;
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(14px, 1.4vw, 17px);
+      font-size: clamp(17px, 2vw, 23px);
       font-weight: 600;
       letter-spacing: 0.01em;
       line-height: 1.4;
       color: var(--ink-2);
       margin-top: 16px;
+    }
+    .hero-headline-sub strong {
+      color: var(--red);
+      font-weight: 800;
     }
 
     .hero-foot { display: flex; flex-direction: column; gap: 20px; }
@@ -2036,14 +2021,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Text content, max-width 58%, no column border, no box -->
   <div class="hero-content">
     <div>
-      <p class="hero-location">Shenton Park, Perth</p>
-      <p class="hero-kicker">European, hybrid &amp; EV workshop · 30+ years in the same spot</p>
+      <p class="hero-kicker">European, hybrid &amp; EV mechanic in Shenton Park · 30+ years in the same spot</p>
       <h1 class="hero-headline">
   <span class="line">We'll tell</span>
   <span class="line">you what's</span>
   <span class="line">wrong before</span>
   <span class="line">we fix <em>it.</em></span>
-  <span class="hero-headline-sub">Honest, straight-talking mechanic.</span>
+  <span class="hero-headline-sub">Your honest, straight-talking <strong>mechanic</strong>.</span>
 </h1>
     </div>
     <div class="hero-foot">
