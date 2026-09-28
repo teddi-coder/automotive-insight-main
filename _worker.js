@@ -58,30 +58,30 @@ function addSecurityHeaders(response) {
 // ---------------------------------------------------------------------------
 const SITEMAP_PAGES = [
   { url: '/',                          priority: '1.0', changefreq: 'weekly'  },
-  { url: '/about',                     priority: '0.8', changefreq: 'monthly' },
-  { url: '/services',                  priority: '0.9', changefreq: 'monthly' },
-  { url: '/european-cars',             priority: '0.9', changefreq: 'monthly' },
-  { url: '/asian-cars',                priority: '0.8', changefreq: 'monthly' },
-  { url: '/logbook-service',           priority: '0.8', changefreq: 'monthly' },
-  { url: '/fleet-maintenance',         priority: '0.7', changefreq: 'monthly' },
-  { url: '/brakes-suspension',         priority: '0.8', changefreq: 'monthly' },
-  { url: '/diagnostics',               priority: '0.8', changefreq: 'monthly' },
-  { url: '/auto-electrical',           priority: '0.7', changefreq: 'monthly' },
-  { url: '/ev-hybrid',                 priority: '0.9', changefreq: 'monthly' },
-  { url: '/ev-hybrid/hybrid-servicing',priority: '0.8', changefreq: 'monthly' },
-  { url: '/ev-hybrid/ev-charging',     priority: '0.7', changefreq: 'monthly' },
-  { url: '/ev-hybrid/ev-diagnostics',  priority: '0.8', changefreq: 'monthly' },
-  { url: '/faqs',                      priority: '0.7', changefreq: 'monthly' },
-  { url: '/reviews',                   priority: '0.6', changefreq: 'monthly' },
-  { url: '/contact',                   priority: '0.8', changefreq: 'monthly' },
+  { url: '/about/',                    priority: '0.8', changefreq: 'monthly' },
+  { url: '/services/',                 priority: '0.9', changefreq: 'monthly' },
+  { url: '/european-cars/',            priority: '0.9', changefreq: 'monthly' },
+  { url: '/asian-cars/',               priority: '0.8', changefreq: 'monthly' },
+  { url: '/logbook-service/',          priority: '0.8', changefreq: 'monthly' },
+  { url: '/fleet-maintenance/',        priority: '0.7', changefreq: 'monthly' },
+  { url: '/brakes-suspension/',        priority: '0.8', changefreq: 'monthly' },
+  { url: '/diagnostics/',              priority: '0.8', changefreq: 'monthly' },
+  { url: '/auto-electrical/',          priority: '0.7', changefreq: 'monthly' },
+  { url: '/ev-hybrid/',                priority: '0.9', changefreq: 'monthly' },
+  { url: '/ev-hybrid/hybrid-servicing/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/ev-hybrid/ev-charging/',    priority: '0.7', changefreq: 'monthly' },
+  { url: '/ev-hybrid/ev-diagnostics/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/faqs/',                     priority: '0.7', changefreq: 'monthly' },
+  { url: '/reviews/',                  priority: '0.6', changefreq: 'monthly' },
+  { url: '/contact/',                  priority: '0.8', changefreq: 'monthly' },
 ];
 
+// No <lastmod>: it used to be stamped with the request date, which told
+// crawlers every page changed daily and taught them to ignore the field.
 function buildSitemap() {
-  const today = new Date().toISOString().split('T')[0];
   const urls = SITEMAP_PAGES.map(p => `
   <url>
     <loc>${DOMAIN}${p.url}</loc>
-    <lastmod>${today}</lastmod>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
   </url>`).join('');
